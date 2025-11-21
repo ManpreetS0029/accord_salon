@@ -1,0 +1,98 @@
+.addbtns, .addbtnssale  {
+    margin: 10px !important;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    border: 0px;
+    border-radius: 0;
+}
+
+
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus { background-color: #000;
+    color: #fff;}
+
+.nav-tabs > li > a { background-color: #aaa; margin: 3px;}
+.nav-tabs > li > a { color: #000; }
+
+.addedservicebtn{ padding: 10px; background-color: #dedede; margin: 2px 0px; }
+
+.mybtns { display: inline-block; }
+.myeditforms { display: inline-block; }
+.myeditforms .btn{ display: inline-block; }
+
+ul.searchlist { list-style-type: none; min-width: 300px; border: 1px solid #999; height: 300px;   overflow-y: auto; padding-left: 0; margin-left: 0; display: none; }
+ul.searchlist li{   margin: 1px 0; background-color: #dedede; padding: 15px 10px; cursor: pointer; }
+
+.select2-container--default .select2-selection--single { height: 3.1rem !important; }
+.select2-container--default .select2-selection--single .select2-selection__rendered { font-size: 16px; }
+.select2-container--default .select2-search--dropdown .select2-search__field { font-size: 16px; }
+
+.sales_table select {  margin-top: 0px; margin-bottom: 10px; }
+.attn_btns { line-height:44px; border-radius: 22px; width:44px; height: 44px; display: inline-block; text-align: center; margin: 3px;  }
+.attn_btns.green { background-color: #5cb85c !important; color: #fff !important; }
+.attn_btns.orange { background-color: #ffc107 !important;  color: #000 !important;  }
+.attn_btns.red { background-color: #d9534f !important; color: #fff !important; }
+.attn_btns.blue{ background-color: #007bff !important; color: #fff !important; }
+.service_done_assign { padding: 7px 0px; }
+
+
+.panel section  {border: 1px solid #cccccc;  padding: 15px 15px 0 15px !important;
+    margin-top:15px;}
+
+
+.messagebar-top{
+    position: fixed;
+    top: 0;
+    z-index: 1005;
+    width: 100%;
+}
+
+.modal { z-index: 1710 !important; }
+
+.help-block { display: none; }
+.has-error .help-block{ display: block; }
+
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+.dropdown-submenu>a:after {
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+.editable_rows { display: none;}

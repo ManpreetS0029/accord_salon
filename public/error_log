@@ -1,0 +1,387 @@
+[09-Aug-2025 14:53:56 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Aug-2025 16:01:33 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Aug-2025 16:01:57 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Aug-2025 17:27:46 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Aug-2025 20:47:59 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[10-Aug-2025 16:12:57 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[10-Aug-2025 16:13:46 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[11-Aug-2025 12:42:32 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[11-Aug-2025 12:43:05 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[11-Aug-2025 21:11:59 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[11-Aug-2025 21:12:22 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[11-Aug-2025 21:12:56 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Aug-2025 17:34:08 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[16-Aug-2025 19:32:08 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[24-Aug-2025 09:40:03 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[31-Aug-2025 18:56:18 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[31-Aug-2025 18:56:22 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[31-Aug-2025 18:56:30 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[07-Sep-2025 20:35:33 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[07-Sep-2025 20:40:59 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[10-Sep-2025 18:13:52 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[10-Sep-2025 18:14:20 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[13-Sep-2025 20:55:56 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[10-Oct-2025 14:12:39 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[07-Nov-2025 18:39:17 Asia/Kolkata] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/home4/khurl2tr...', 1277)
+#1 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(571): include('/home4/khurl2tr...')
+#2 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home4/khurl2tr...')
+#3 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /home4/khurl2tr/accordsalon.com/adminansal/index.php(52): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main} in /home4/khurl2tr/accordsalon.com/adminappfiles_ansal/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[15-Nov-2025 10:13:35 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/khurl2tr/accordsalon.com/adminansal/../adminappfiles_ansal/bootstrap/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/khurl2tr/accordsalon.com/adminansal/index.php:22
+Stack trace:
+#0 {main}
+  thrown in /home4/khurl2tr/accordsalon.com/adminansal/index.php on line 22
+[15-Nov-2025 10:15:07 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/khurl2tr/accordsalon.com/adminansal/../adminappfiles_ansal/bootstrap/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/khurl2tr/accordsalon.com/adminansal/index.php:22
+Stack trace:
+#0 {main}
+  thrown in /home4/khurl2tr/accordsalon.com/adminansal/index.php on line 22
+[15-Nov-2025 10:32:40 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/khurl2tr/accordsalon.com/adminansal/../adminappfiles_ansal/bootstrap/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/khurl2tr/accordsalon.com/adminansal/index.php:22
+Stack trace:
+#0 {main}
+  thrown in /home4/khurl2tr/accordsalon.com/adminansal/index.php on line 22

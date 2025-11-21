@@ -1,0 +1,32 @@
+.addbtns, .addbtnssale  {
+    margin: 10px !important;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    border: 0px;
+    border-radius: 0;
+}
+
+
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus { background-color: #000;
+    color: #fff;}
+
+.nav-tabs > li > a { background-color: #aaa; margin: 3px;}
+.nav-tabs > li > a { color: #000; }
+
+.addedservicebtn{ padding: 10px; background-color: #dedede; margin: 2px 0px; }
+
+.mybtns { display: inline-block; }
+.myeditforms { display: inline-block; }
+.myeditforms .btn{ display: inline-block; }
+
+ul.searchlist { list-style-type: none; min-width: 300px; border: 1px solid #999; height: 300px;   overflow-y: auto; padding-left: 0; margin-left: 0; display: none; }
+ul.searchlist li{   margin: 1px 0; background-color: #dedede; padding: 15px 10px; cursor: pointer; }
+
+.select2-container--default .select2-selection--single { height: 3.1rem !important; }
+.select2-container--default .select2-selection--single .select2-selection__rendered { font-size: 16px; }
+.select2-container--default .select2-search--dropdown .select2-search__field { font-size: 16px; }
+
+.sales_table select {  margin-top: 0px; margin-bottom: 10px; }
