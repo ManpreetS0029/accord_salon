@@ -160,7 +160,7 @@
                     <?php
 
                     if (method_exists($purchases, 'links')) { ?>
-                        {{ $purchases->links() }}
+                        {{ $purchases->links('vendor.pagination.custom') }}
                     <?php } ?>
 
                 </div>

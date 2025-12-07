@@ -147,7 +147,9 @@ class SaleController extends Controller
             $salesAll = Sale::groupBy('id')->orderBy('sale.created_at', 'desc')->get();
             $saleForCalculations = $salesAll;
 
-            $sales = Sale::groupBy('id')->orderBy('sale.created_at', 'desc')->paginate(50);
+            $perPage = $request->get('per_page', 50);
+            $sales = Sale::groupBy('id')->orderBy('sale.created_at', 'desc')->paginate($perPage);
+            $sales->appends(['datefrom' => $request->datefrom, 'dateto' => $request->dateto, 'paymentmode' => $request->paymentmode, 'per_page' => $perPage]);
         } else {
 
             $sales = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();

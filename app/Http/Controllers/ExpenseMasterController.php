@@ -14,11 +14,20 @@ class ExpenseMasterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $query = ExpenseMaster::query();
 
-        $expenses = ExpenseMaster::orderBy('name', 'asc') -> paginate(100);
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('name', 'like', "%".$searchText."%" );
+        }
+
+        $perPage = $request->get('per_page', 100);
+        $expenses = $query->orderBy('name', 'asc') -> paginate($perPage);
+        $expenses->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
         return view( 'expensemasterlist',['expenses' => $expenses] );
 

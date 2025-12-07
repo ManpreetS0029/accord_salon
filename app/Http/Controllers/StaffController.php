@@ -109,8 +109,21 @@ class StaffController extends Controller
             $attenDance->save();
         }
 
-        $staff = Staff::paginate(50);
+        $query = Staff::query();
 
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where(function($query) use ( $searchText ) { 
+                $query->orWhere('firstname', 'like', "%".$searchText."%" )
+                     ->orWhere('lastname', 'like', "%".$searchText."%" )
+                     ->orWhere('mobile', 'like', "%".$searchText."%" );
+            });
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $staff = $query->paginate($perPage);
+        $staff->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
         return view("stafflist", ['staffmembers' => $staff]);
 

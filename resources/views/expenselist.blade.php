@@ -166,7 +166,7 @@
                         </table>
 
                     </div>
-                    {{ $expenses->links() }}
+                    {{ $expenses->links('vendor.pagination.custom') }}
 
                 </div>
             </div>

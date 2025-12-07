@@ -15,11 +15,20 @@ class CategoryController extends Controller
 {
     //
 
-    public function index()
+    public function index(Request $request)
     {
+        $query = DB::table('servicecategories');
 
-         $categories =  DB::table('servicecategories')->paginate(50);
-         //print_r($categories);
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('name', 'like', "%".$searchText."%" );
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $categories = $query->paginate($perPage);
+        $categories->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
+        //print_r($categories);
         return view('categorylist', ['categories' => $categories]);
         //return View('addcategory');
     }

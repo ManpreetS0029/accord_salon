@@ -58,8 +58,9 @@ WHERE (S.walkin_name != "Walk-In" OR S.walkin_name IS NULL) AND S.created_at >= 
         }
 
         
-        $clients = $query->paginate(50);
-        $clients->appends(['lastvisit' => $request->lastvisit, 'searchtext' => $request->searchtext]);
+        $perPage = $request->get('per_page', 50);
+        $clients = $query->paginate($perPage);
+        $clients->appends(['lastvisit' => $request->lastvisit, 'searchtext' => $request->searchtext, 'per_page' => $perPage]);
         //$clients =  DB::table('client')->paginate(50);
 
 
@@ -198,7 +199,9 @@ WHERE (S.walkin_name != "Walk-In" OR S.walkin_name IS NULL) AND S.created_at >= 
 
     	$query = ClientPayment::query();
     	 $query->where('clientid', '=', $id);
-	    $paymentList = $query->orderBy('id', 'desc' )->paginate(100);
+    	$perPage = $request->get('per_page', 100);
+	    $paymentList = $query->orderBy('id', 'desc' )->paginate($perPage);
+	    $paymentList->appends(['per_page' => $perPage]);
 
 	    return view('clientpaymentlist', ['paymentlist' => $paymentList, 'clientid' => $id]);
     }

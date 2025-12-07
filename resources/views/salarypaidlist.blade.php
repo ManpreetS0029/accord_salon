@@ -92,6 +92,8 @@
 
                     </div>
 
+                    {{ $salarypaidlist->links('vendor.pagination.custom') }}
+
                 </div>
             </div>
         </div>

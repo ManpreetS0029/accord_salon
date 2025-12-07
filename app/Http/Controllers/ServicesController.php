@@ -15,12 +15,20 @@ class ServicesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $query = Services::query();
 
-        $services = Services::paginate(50);
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('name', 'like', "%".$searchText."%" );
+        }
 
+        $perPage = $request->get('per_page', 50);
+        $services = $query->paginate($perPage);
+        $services->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
          return view('serviceslist', ['services' => $services ]);
     }

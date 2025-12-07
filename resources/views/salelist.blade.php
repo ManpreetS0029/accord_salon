@@ -194,7 +194,7 @@
                     <?php
 
                     if (method_exists($sales, 'links')) { ?>
-                        {{ $sales->links() }}
+                        {{ $sales->links('vendor.pagination.custom') }}
 
                     <?php } ?>
 

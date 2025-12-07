@@ -46,7 +46,10 @@ class SalaryController extends Controller
             $salaryPaidQuery->where('staffid', '=', intval($request->searchtext));
         }
 
-        $rs = $salaryPaidQuery->get();
+        $perPage = $request->get('per_page', 50);
+        $rs = $salaryPaidQuery->paginate($perPage);
+        $rs->appends(['searchtext' => $request->searchtext, 'salary_month' => $request->salary_month, 'salary_year' => $request->salary_year, 'per_page' => $perPage]);
+
         return view("salarypaidlist", ['salarypaidlist' => $rs, 'months' => $months, 'years' => $year, 'paymentmodes' => $paymentModes, 'staff' => $staffSelectBox]);
     }
 

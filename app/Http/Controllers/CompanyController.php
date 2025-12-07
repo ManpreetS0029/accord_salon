@@ -18,10 +18,21 @@ class CompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $companies = Company::orderBy('companyname','asc')->paginate(50);
+        $query = Company::query();
+
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('companyname', 'like', "%".$searchText."%" );
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $companies = $query->orderBy('companyname','asc')->paginate($perPage);
+        $companies->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
+
         return view('companylist', ['companies' => $companies]);
     }
 

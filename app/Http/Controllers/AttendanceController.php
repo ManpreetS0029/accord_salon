@@ -60,7 +60,9 @@ class AttendanceController extends Controller
         }
 
 
-        $attendanceList = $attendanceListQuery->get();
+        $perPage = $request->get('per_page', 50);
+        $attendanceList = $attendanceListQuery->paginate($perPage);
+        $attendanceList->appends(['searchtext' => $request->searchtext, 'attendance_month' => $request->attendance_month, 'attendance_year' => $request->attendance_year, 'per_page' => $perPage]);
 
         return view("attendancelist", ['staff' => $staffArr , 'months' => $months, 'year' => date("Y"), 'attendanceList' => $attendanceList   ]);
 

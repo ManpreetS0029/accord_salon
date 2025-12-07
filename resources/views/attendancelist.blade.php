@@ -125,7 +125,7 @@
 
                         </div>
 
-
+                        {{ $attendanceList->links('vendor.pagination.custom') }}
 
                     </div>
                 </div>

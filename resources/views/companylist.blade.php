@@ -12,6 +12,21 @@
                         @include('common.errors')
                         @include('common.success')
 
+                        <form action="" method="get">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="">Search by Company Name</label>
+                                    {{ Form::text('searchtext', request()->get('searchtext'), ['class' => 'form-control'] )}}
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="">&nbsp;</label><br />
+                                    {{ Form::submit('Search',  array('class' => 'btn btn-primary', 'name' => 'search'))  }}
+                                </div>
+                            </div>
+                        </form>
+                        <br />
+
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -67,7 +82,7 @@
                             </table>
 
                         </div>
-                        {{ $companies->links() }}
+                        {{ $companies->links('vendor.pagination.custom') }}
 
 
                     </div>

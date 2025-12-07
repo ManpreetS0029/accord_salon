@@ -17,10 +17,20 @@ class ProductIssueController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $issuedProduct = ProductIssue::paginate(50);
+        $query = ProductIssue::query();
+
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('productname', 'like', "%".$searchText."%" );
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $issuedProduct = $query->paginate($perPage);
+        $issuedProduct->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
         return view( 'productissuelist', ['items' => $issuedProduct ] );
     }

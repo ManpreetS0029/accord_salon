@@ -13,10 +13,25 @@ class ClosingDayController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $list = ClosingDay::orderBy("dates", "Desc")->paginate(100);
+        $query = ClosingDay::query();
+
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            // Convert date from dd/mm/yyyy to yyyy-mm-dd
+            $dateArr = explode('/', $searchText);
+            if(count($dateArr) == 3) {
+                $searchDate = $dateArr[2] . '-' . $dateArr[1] . '-' . $dateArr[0];
+                $query->whereDate('dates', '=', $searchDate);
+            }
+        }
+
+        $perPage = $request->get('per_page', 100);
+        $list = $query->orderBy("dates", "Desc")->paginate($perPage);
+        $list->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
         return view( 'closingdaylist',[ 'lists' => $list ] );
     }

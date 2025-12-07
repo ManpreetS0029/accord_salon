@@ -16,11 +16,20 @@ class PackageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $packages = Packages::paginate(50);  //DB::table('packagemaster')->paginate(50);
+        $query = Packages::query();
 
+        if( $request->searchtext != "" )
+        {
+            $searchText = $request->searchtext;
+            $query->where('title', 'like', "%".$searchText."%" );
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $packages = $query->paginate($perPage);
+        $packages->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
         /*foreach ( $packages as $package)
        {

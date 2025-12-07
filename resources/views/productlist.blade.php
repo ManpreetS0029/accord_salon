@@ -98,8 +98,8 @@
 							</tbody>
 						</table>
 
-					</div>
-					{{ $products->links() }}
+                    </div>
+					{{ $products->links('vendor.pagination.custom') }}
 
 
 				</div>

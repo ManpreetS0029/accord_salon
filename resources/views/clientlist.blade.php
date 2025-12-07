@@ -82,7 +82,7 @@
                         </table>
 
                     </div>
-                    {{ $clients->links() }}
+                    {{ $clients->links('vendor.pagination.custom') }}
 
 
                 </div>

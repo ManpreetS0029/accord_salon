@@ -45,7 +45,9 @@ class ProductController extends Controller
 
         $query->orderBy('created_at', 'desc');
 
-        $products = $query->paginate(50); //Product::paginate(50);
+        $perPage = $request->get('per_page', 50);
+        $products = $query->paginate($perPage); //Product::paginate(50);
+        $products->appends(['searchtext' => $request->searchtext, 'per_page' => $perPage]);
 
 
         return view("productlist", ['products' => $products]);

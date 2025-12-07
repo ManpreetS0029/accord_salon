@@ -101,7 +101,9 @@ class ClientsPackageController extends Controller
 
         //     $query = ClientPackage::query();
 
-        $clientpackages = $query->orderBy('id', 'DESC')->paginate(50);
+        $perPage = $request->get('per_page', 50);
+        $clientpackages = $query->orderBy('id', 'DESC')->paginate($perPage);
+        $clientpackages->appends(['searchtext' => $request->searchtext, 'searchtextclientname' => $request->searchtextclientname, 'searchtextclientphone' => $request->searchtextclientphone, 'per_page' => $perPage]);
         
         return view('clientpackagelist', ['clientpackages' => $clientpackages]);
         // return view('clientlist', [ 'clients' => $clients]);

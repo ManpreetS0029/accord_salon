@@ -10,6 +10,20 @@
                 <div class="panel-body">
                     @include('common.errors')
                     @include('common.success')
+                    
+                    <form action="" method="get">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="">Search by Staff Name</label>
+                                {{ Form::text('searchtext', request()->get('searchtext'), ['class' => 'form-control'] )}}
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="">&nbsp;</label><br />
+                                {{ Form::submit('Search',  array('class' => 'btn btn-primary', 'name' => 'search'))  }}
+                            </div>
+                        </div>
+                    </form>
                     <br />
 {{Form::open( array('method' => 'post', 'route' => 'staff.updateattendance', 'id' => 'group_attendance_form'  ))}}
                     {{csrf_field()}}
@@ -131,7 +145,7 @@
 
                     </div>
 
-                    {{ $staffmembers->links() }}
+                    {{ $staffmembers->links('vendor.pagination.custom') }}
 
 
                 </div>

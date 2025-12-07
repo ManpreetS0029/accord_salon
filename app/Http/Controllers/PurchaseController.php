@@ -111,7 +111,9 @@ class PurchaseController extends Controller
             
             
          
-            $purchases = Purchase::groupBy('purchasemaster.id')->orderBy('purchasemaster.created_at', 'desc')->paginate(50);
+            $perPage = $request->get('per_page', 50);
+            $purchases = Purchase::groupBy('purchasemaster.id')->orderBy('purchasemaster.created_at', 'desc')->paginate($perPage);
+            $purchases->appends(['datefrom' => $request->datefrom, 'dateto' => $request->dateto, 'per_page' => $perPage]);
 
             
             

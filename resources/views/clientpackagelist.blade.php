@@ -95,7 +95,7 @@
                         </table>
 
                     </div>
-                    {{ $clientpackages->links() }}
+                    {{ $clientpackages->links('vendor.pagination.custom') }}
 
                 </div>
 

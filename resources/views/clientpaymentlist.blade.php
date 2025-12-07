@@ -90,7 +90,7 @@
                             </table>
 
                         </div>
-                        {{ $paymentlist->links() }}
+                        {{ $paymentlist->links('vendor.pagination.custom') }}
 
                     </div>
 

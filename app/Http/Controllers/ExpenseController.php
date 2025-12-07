@@ -78,15 +78,16 @@ class ExpenseController extends Controller
 		    }
 
 
-		    if( $dateFrom == '' && $dateTo == '' && $cats == '')
-		    {
-			    $expenses = Expense::orderBy('id','desc')->paginate(50);
+	    $perPage = $request->get('per_page', 50);
+	    if( $dateFrom == '' && $dateTo == '' && $cats == '')
+	    {
+		    $expenses = Expense::orderBy('id','desc')->paginate($perPage);
 
 
 
-		    }
-		    else {
-			    $expenses = $query->orderBy( 'id', 'desc' )->paginate( 50 );
+	    }
+	    else {
+		    $expenses = $query->orderBy( 'id', 'desc' )->paginate( $perPage );
 			    $expensesAll = $query->orderBy('id','desc')->get();
 
 			    //print_r($expensesAll);
@@ -101,14 +102,17 @@ class ExpenseController extends Controller
 		    }
 
 
-	    }
-	    else
-	    {
-		    $expenses = Expense::orderBy('id','desc')->paginate(50);
+    }
+    else
+    {
+	    $perPage = $request->get('per_page', 50);
+	    $expenses = Expense::orderBy('id','desc')->paginate($perPage);
 
 
 
-	    }
+    }
+    
+    $expenses->appends(['datefrom' => $request->datefrom, 'dateto' => $request->dateto, 'expensecatsearch' => $request->expensecatsearch, 'per_page' => $request->get('per_page', 50)]);
 
 	    $expenseMaster = ExpenseMaster::orderBy( 'name','asc')->get();
 
