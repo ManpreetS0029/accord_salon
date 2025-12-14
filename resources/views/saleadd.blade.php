@@ -12,17 +12,33 @@ $staffOptions = '<option value="">Select</option>';
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+<style>
+    .compact-form .panel-body { padding: 10px !important; }
+    .compact-form .form-group { margin-bottom: 8px !important; }
+    .compact-form .row { margin-bottom: 5px !important; }
+    .compact-form h3 { margin-top: 5px !important; margin-bottom: 8px !important; font-size: 16px !important; }
+    .compact-form .nav-tabs { margin-bottom: 8px !important; }
+    .compact-form .tab-content { padding: 5px 0 !important; }
+    .compact-form .table { margin-bottom: 5px !important; }
+    .compact-form .table th, .compact-form .table td { padding: 5px 8px !important; font-size: 13px !important; }
+    .compact-form .addbtnssale { margin: 3px !important; padding: 5px 10px !important; font-size: 13px !important; }
+    .compact-form label { margin-bottom: 2px !important; font-size: 13px !important; }
+    .compact-form .form-control { padding: 4px 8px !important; height: 28px !important; font-size: 13px !important; }
+    .compact-form .btn { padding: 4px 12px !important; font-size: 13px !important; }
+    .compact-form br { display: none; }
+</style>
+    <div class="container-fluid compact-form">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Add Sale
-<div style="float: right">
-			    <a  href="<?php echo route('sale.index'); ?>"><strong>List Sale</strong></a>
-			</div>
-        </div>
+                    <div class="panel-heading" style="padding: 8px 15px;">
+                        <strong>Add Sale</strong>
+                        <div style="float: right">
+                            <a href="<?php echo route('sale.index'); ?>"><strong>List Sale</strong></a>
+                        </div>
+                    </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body" style="padding: 10px;">
 
                         @include('common.errors')
                         @include('common.success')
@@ -30,7 +46,7 @@ $staffOptions = '<option value="">Select</option>';
                             {{ Form::open(array('route' => ('sale.store'))) }}
                             {{ csrf_field() }}
 
-                            <div class="panel-body container-fluid">
+                            <div class="panel-body container-fluid" style="padding: 5px;">
 
                                 <!--<div class="row">
                                     <div class="col-md-6">
@@ -47,7 +63,7 @@ $staffOptions = '<option value="">Select</option>';
 				</ul>
 				<div class="tab-content">
 				    <div id="tab_existclient" class="tab-pane fade <?php  echo Request::old('clientname') == '' ? 'in active' : ''; ?>" >
-					<div class="row row-lg" style="margin-top:20px; margin-bottom: 20px;">
+					<div class="row row-lg" style="margin-top:5px; margin-bottom: 5px;">
 
 					    <div class="col-lg-12">
 
@@ -59,8 +75,7 @@ $staffOptions = '<option value="">Select</option>';
 
 
 						    {{ Form::label('title', 'Select Client Or Walk-In') }} *
-						    <br />
-						    <div class="row">
+						    <div class="row" style="margin-top: 3px;">
 							<div class="col-md-4">
                             {{ Form::select('clientid', $clients, '' , array('class' => 'form-control', 'id' => 'client_dropdown', 'data-plugin' => "select2") ) }}
 							</div>
@@ -92,9 +107,7 @@ $staffOptions = '<option value="">Select</option>';
 					
 				    </div>
 				    <div id="tab_newclient" class="tab-pane fade <?php  echo Request::old('clientname') != '' ? 'in active' : ''; ?>">
-
-
-					<div class="row new_client_info" style="margin-top:20px; margin-bottom: 20px;">
+					<div class="row new_client_info" style="margin-top:5px; margin-bottom: 5px;">
 					   
 						
 						<div class="row">
@@ -162,20 +175,16 @@ $staffOptions = '<option value="">Select</option>';
 
 
 
-                                <div class="row" style="border: 1px solid #ccc;">
-                                    <div class="col-md-4">
+                                <div class="row" style="border: 1px solid #ccc; padding: 5px; margin-top: 5px;">
+                                    <div class="col-md-3">
                                         {{ Form::label('saledate', 'Sale Date') }}
                                         {{ Form::text('saledate', date("d/m/Y"), array('class' => 'form-control dates') ) }}
-                                        <br />
                                     </div>
-
                                 </div>
-                                <br />
 				
-                                <div class="row" style="border: 1px solid #ccc;">
+                                <div class="row" style="border: 1px solid #ccc; padding: 5px; margin-top: 5px;">
                                     <div class="col-md-12">
-                                        <h3>+ Add Services/Products</h3>
-                                        <br />
+                                        <h3 style="margin: 5px 0 5px 0; font-size: 16px;">+ Add Services/Products</h3>
 
 
                                         <ul class="nav nav-tabs">
@@ -209,8 +218,7 @@ $staffOptions = '<option value="">Select</option>';
 
                                             <!-- ================= Services Tab ================-->
                                             <div id="tab_services" class="tab-pane fade">
-						<br /><br />
-						<ul class="nav nav-tabs">
+						<ul class="nav nav-tabs" style="margin-top: 5px;">
 						    <?php
 						    $x = 0;
 
@@ -268,8 +276,7 @@ $staffOptions = '<option value="">Select</option>';
 
                                             <!-- =========================== Products Tab =============== -->
                                             <div id="tab_products" class="tab-pane fade" >
-                                                <br /><br /><br />
-                                                <div class="row">
+                                                <div class="row" style="margin-top: 5px;">
 
 						    <div class="form-group col-md-12">
 							
@@ -299,15 +306,12 @@ $staffOptions = '<option value="">Select</option>';
 							    </div>
                                                             
 							    <div class="col-md-4">
-								<label>&nbsp;</label><br />
-								<button class="btn btn-primary" id="add_product_button" type="button">Add</button>
+                                                                <label>&nbsp;</label>
+								<button class="btn btn-primary" id="add_product_button" type="button" style="margin-top: 20px;">Add</button>
                                                </div>
                                            </div>
-
-
                                                 </div>
                                                 </div>
-                                                <br /><br /><br />
                                             </div>
                                             <!-- =========================== ./Products Tab ============== -->
 
@@ -317,8 +321,8 @@ $staffOptions = '<option value="">Select</option>';
 
                                 </div>
 
-                                <div class="row">
-                                    <h3>Invoice Details</h3>
+                                <div class="row" style="margin-top: 5px;">
+                                    <h3 style="margin: 5px 0 5px 0; font-size: 16px;">Invoice Details</h3>
 
                                     <div class="table-responsive">
                                         <table class="sales_table table table-hover table-bordered">
@@ -440,15 +444,15 @@ $staffOptions = '<option value="">Select</option>';
 
 
 
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="margin-bottom: 5px;">
                                                         <div class="row">
                                                             <div class="col-md-3">
-                                                                {{ Form::label('paymentmodeid', 'Payment Mode') }} *<br />
+                                                                {{ Form::label('paymentmodeid', 'Payment Mode') }} *
                                                                 {{ Form::select('paymentmodeid[]', $paymentmodes, '' , array('class' => 'form-control', 'id' => 'paymentmodeid') ) }}
                                                             </div>
 
                                                             <div class="col-md-3">
-                                                                {{ Form::label('amount', 'Amount Paid') }} *<br />
+                                                                {{ Form::label('amount', 'Amount Paid') }} *
                                                                 {{ Form::text('amount[]',  '' , array('class' => 'form-control', 'id' => 'amountpaid') ) }}
 
 
@@ -509,15 +513,15 @@ $staffOptions = '<option value="">Select</option>';
 
 
 
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="margin-bottom: 5px;">
                                                         <div class="row">
                                                             <div class="col-md-3">
-                                                                {{ Form::label('paymentmodeid', 'Payment Mode') }} *<br />
+                                                                {{ Form::label('paymentmodeid', 'Payment Mode') }} *
                                                                 {{ Form::select('paymentmodeid[]', array(null => "Select")+$paymentmodes, '' , array('class' => 'form-control', 'id' => 'paymentmodeid2') ) }}
                                                             </div>
 
                                                             <div class="col-md-3">
-                                                                {{ Form::label('amount', 'Amount Paid') }} *<br />
+                                                                {{ Form::label('amount', 'Amount Paid') }} *
                                                                 {{ Form::text('amount[]',  '' , array('class' => 'form-control', 'id' => 'amountpaid2') ) }}
 
 
@@ -590,12 +594,9 @@ $staffOptions = '<option value="">Select</option>';
                                 //  $arrVals = Request::old('hdnaddedservice');
                                 ?>
 
-                                <br><br>
-                                <div class="row">
-                                    <div class="col-md-6">
-
+                                <div class="row" style="margin-top: 5px;">
+                                    <div class="col-md-12">
                                         <button type="reset" class="btn btn-primary">Reset</button>
-
                                         {{ Form::submit('Save',  array('class' => 'btn btn-primary', 'id' => 'btn_save_sale'))  }}
                                     </div>
                                 </div>

@@ -33,6 +33,20 @@ $printData .= '<table id="items_details"><thead>';
     .modal-content { width: 100%; height: 100%; }
     .modal-body { width: 100%; height: 70%; }
     iframe { border: 0px; }
+    
+    .compact-form .panel-body { padding: 10px !important; }
+    .compact-form .form-group { margin-bottom: 8px !important; }
+    .compact-form .row { margin-bottom: 5px !important; }
+    .compact-form h3 { margin-top: 5px !important; margin-bottom: 8px !important; font-size: 16px !important; }
+    .compact-form .nav-tabs { margin-bottom: 8px !important; }
+    .compact-form .tab-content { padding: 5px 0 !important; }
+    .compact-form .table { margin-bottom: 5px !important; }
+    .compact-form .table th, .compact-form .table td { padding: 5px 8px !important; font-size: 13px !important; }
+    .compact-form .addbtnssale { margin: 3px !important; padding: 5px 10px !important; font-size: 13px !important; }
+    .compact-form label { margin-bottom: 2px !important; font-size: 13px !important; }
+    .compact-form .form-control { padding: 4px 8px !important; height: 28px !important; font-size: 13px !important; }
+    .compact-form .btn { padding: 4px 12px !important; font-size: 13px !important; }
+    .compact-form br { display: none; }
             
      @media screen {
         #display_screen { display: block; }
@@ -57,19 +71,21 @@ $printData .= '<table id="items_details"><thead>';
      }
     </style>
     
-    <div id="display_screen" class="container">
+    <div id="display_screen" class="container-fluid compact-form">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-         <div class="panel-heading">Update Sale <?php if( $sale->actualPendingAmount() > 0 ) { echo 'Pending Amount: '.$sale->actualPendingAmount(); } else { echo '(Fully Paid)'; } ?> <div style="float:right">
-<a href="<?php echo route('sale.index'); ?>">List Sales</a> | 
-         
-<button style="margin-top: -7px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Manage Payments
-</button>
-             </div></div>
+         <div class="panel-heading" style="padding: 8px 15px;">
+             <strong>Update Sale</strong> <?php if( $sale->actualPendingAmount() > 0 ) { echo 'Pending Amount: '.$sale->actualPendingAmount(); } else { echo '(Fully Paid)'; } ?> 
+             <div style="float:right">
+                 <a href="<?php echo route('sale.index'); ?>">List Sales</a> | 
+                 <button style="margin-top: -7px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                     Manage Payments
+                 </button>
+             </div>
+         </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body" style="padding: 10px;">
 
                         @include('common.errors')
                         @include('common.success')
@@ -77,7 +93,7 @@ $printData .= '<table id="items_details"><thead>';
 {{ Form::open(array( 'method' => 'PUT', 'route' => [ 'sale.update', $sale->id ] )) }}
                             {{ csrf_field() }}
 
-                            <div class="panel-body container-fluid">
+                            <div class="panel-body container-fluid" style="padding: 5px;">
 
                                 <!--
                                     <div class="row">
@@ -96,8 +112,8 @@ $printData .= '<table id="items_details"><thead>';
 
                                         <div class="form-group row">
 
-                                            {{ Form::label('title', 'Select Client') }} Or Walk-In * <br />
-                                            <div class="row">
+                                            {{ Form::label('title', 'Select Client') }} Or Walk-In *
+                                            <div class="row" style="margin-top: 3px;">
                                                 <div class="col-md-4">
 
                                             {{ Form::select('clientid', $clients, $sale->client ? $sale->client->id : '0' , array('class' => 'form-control', 'data-plugin' => "select2", 'id' => 'client_dropdown') ) }}
@@ -133,20 +149,15 @@ $printData .= '<table id="items_details"><thead>';
 					
                                 </div>
 
-				<br />
-                                    <div class="row" style="border: 1px solid #ccc;">
-                                        <div class="col-md-4">
+                                    <div class="row" style="border: 1px solid #ccc; padding: 5px; margin-top: 5px;">
+                                        <div class="col-md-3">
                                             {{ Form::label('saledate', 'Sale Date') }}
                                             {{ Form::text('saledate', date("d/m/Y", strtotime($sale->created_at)), array('class' => 'form-control dates_nodefault') ) }}
-                                            <br />
                                         </div>
-
                                     </div>
-                                    <br />
-                                <div class="row" style="border: 1px solid #ccc;">
+                                <div class="row" style="border: 1px solid #ccc; padding: 5px; margin-top: 5px;">
                                     <div class="col-md-12">
-                                        <h3>+ Add Services/Products</h3>
-                                        <br />
+                                        <h3 style="margin: 5px 0 5px 0; font-size: 16px;">+ Add Services/Products</h3>
 
 
                                         <ul class="nav nav-tabs">
@@ -182,8 +193,7 @@ $printData .= '<table id="items_details"><thead>';
 
                                             <!-- ================= Services Tab ================-->
                                             <div id="tab_services" class="tab-pane fade">
-<br /><br />
-                                        <ul class="nav nav-tabs">
+                                        <ul class="nav nav-tabs" style="margin-top: 5px;">
                                             <?php
                                             $x = 0;
 
@@ -241,9 +251,7 @@ $printData .= '<table id="items_details"><thead>';
 
                                             <!-- =========================== Products Tab =============== -->
                                     <div id="tab_products" class="tab-pane fade" >
-                                        <br /><br /><br />
-
-					<div class="row">
+					<div class="row" style="margin-top: 5px;">
 
 					    <div class="col-md-4">
 						<label>Barcode Scanning</label>
@@ -266,11 +274,10 @@ $printData .= '<table id="items_details"><thead>';
 					    </div>
                                             
 					    <div class="col-md-4">
-						<label>&nbsp;</label><br />
-						<button class="btn btn-primary" id="add_product_button" type="button">Add</button>
+						<label>&nbsp;</label>
+						<button class="btn btn-primary" id="add_product_button" type="button" style="margin-top: 20px;">Add</button>
                                             </div>
                                         </div>
-                                                <br /><br /><br />
                                             </div>
                                             <!-- =========================== ./Products Tab ============== -->
 
@@ -280,9 +287,9 @@ $printData .= '<table id="items_details"><thead>';
 
                                 </div>
 
-                                <div class="row">
+                                <div class="row" style="margin-top: 5px;">
                                     <div class="col-md-12">
-                                    <h3>Invoice Details</h3>
+                                    <h3 style="margin: 5px 0 5px 0; font-size: 16px;">Invoice Details</h3>
 
                                     <div class="table-responsive">
                                         <table class="sales_table table table-hover table-bordered">
@@ -605,16 +612,13 @@ $staffOptionsIn = '<option value="">Select</option>';
                                 //  $arrVals = Request::old('hdnaddedservice');
                                 ?>
 
-                                <br><br>
-                                <div class="row">
-                                    <div class="col-md-6">
-
+                                <div class="row" style="margin-top: 5px;">
+                                    <div class="col-md-12">
                                         <button type="reset" class="btn btn-primary">Reset</button>
 <?php if( $user->role == 'Super Admin' ) { ?>
                                         {{ Form::submit('Save',  array('class' => 'btn btn-primary', 'id' => 'btn_save_sale'))  }}
 <?php } ?>
                                         <button id="printbtn"  type="button" class="btn btn-primary">Print</button>
-
                                     </div>
                                 </div>
 

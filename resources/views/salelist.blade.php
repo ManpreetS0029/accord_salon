@@ -94,28 +94,26 @@
                             </div>
 
                             <div class="form-group col-md-2">
-
-                                {{ Form::label('paymentmodeid', 'Payment Mode') }} *<br />
+                                {{ Form::label('paymentmodeid', 'Payment Mode') }}
                                 {{ Form::select('paymentmodeid', $paymentmodes, request('paymentmodeid', '') , array('class' => 'form-control', 'id' => 'paymentmodeid') ) }}
-
-
                             </div>
-
 
                             <div class="form-group col-md-2">
                                 <label>Payment Status</label>
                                 <?php $arr = [null => 'Select', '0' => 'Pending', '1' => 'Success', '2' => 'Failed'];  ?>
-
                                 {{ Form::select('paymentstatus',$arr, request('paymentstatus', null), ['class' => 'form-control'] ) }}
                             </div>
 
                             <div class="form-group col-md-2">
-                                <label for="">&nbsp;</label><br />
-
-                                {{ Form::submit('Search',  array('class' => 'btn btn-primary', 'name' => 'search'))  }}
+                                <label>Records per page</label>
+                                {{ Form::select('per_page', [10 => 10, 25 => 25, 50 => 50, 100 => 100, 200 => 200], request('per_page', 50), ['class' => 'form-control', 'id' => 'per_page_select']) }}
                             </div>
 
-
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                {{ Form::submit('Search',  array('class' => 'btn btn-primary', 'name' => 'search'))  }}
+                            </div>
                         </div>
                     </form>
                     <br />
@@ -191,12 +189,9 @@
                         </table>
 
                     </div>
-                    <?php
-
-                    if (method_exists($sales, 'links')) { ?>
+                    @if(method_exists($sales, 'links') && $sales->hasPages())
                         {{ $sales->links('vendor.pagination.custom') }}
-
-                    <?php } ?>
+                    @endif
 
                 </div>
             </div>

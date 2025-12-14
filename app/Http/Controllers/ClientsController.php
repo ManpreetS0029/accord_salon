@@ -206,5 +206,186 @@ WHERE (S.walkin_name != "Walk-In" OR S.walkin_name IS NULL) AND S.created_at >= 
 	    return view('clientpaymentlist', ['paymentlist' => $paymentList, 'clientid' => $id]);
     }
 
+    public function nonRepeatingCustomers(Request $request)
+    {
+        // Get clients who have made exactly one purchase (non-repeating customers)
+        // This includes clients with no sales at all, or clients with exactly one purchase
+        
+        $query = Client::query();
+        $query->where('isrealclient', '=', '1');
+
+        // Search filter
+        if ($request->searchtext != "") {
+            $searchText = $request->searchtext;
+            $query->where(function($query) use ($searchText) {
+                $query->orWhere('clientname', 'like', "%".$searchText."%")
+                    ->orWhere('phone', 'like', '%'.$searchText.'%')
+                    ->orWhere('phone2', 'like', '%'.$searchText.'%');
+            });
+        }
+
+        // Date range filter
+        $dateFrom = null;
+        $dateTo = null;
+        $dateCondition = '';
+        
+        if ($request->datefrom != "") {
+            $dt = explode('/', $request->datefrom);
+            if (count($dt) == 3) {
+                $dateFrom = $dt[2] . "-" . $dt[1] . "-" . $dt[0];
+            }
+        }
+        
+        if ($request->dateto != "") {
+            $dt = explode('/', $request->dateto);
+            if (count($dt) == 3) {
+                $dateTo = $dt[2] . "-" . $dt[1] . "-" . $dt[0] . " 23:59:59";
+            }
+        }
+
+        // Build date condition for SQL queries (with alias S)
+        $dateCondition = '';
+        if ($dateFrom && $dateTo) {
+            $dateCondition = " AND S.created_at >= '" . $dateFrom . "' AND S.created_at <= '" . $dateTo . "'";
+        } elseif ($dateFrom) {
+            $dateCondition = " AND S.created_at >= '" . $dateFrom . "'";
+        } elseif ($dateTo) {
+            $dateCondition = " AND S.created_at <= '" . $dateTo . "'";
+        }
+
+        // Build date condition for queries without alias
+        $dateConditionNoAlias = '';
+        if ($dateFrom && $dateTo) {
+            $dateConditionNoAlias = " AND created_at >= '" . $dateFrom . "' AND created_at <= '" . $dateTo . "'";
+        } elseif ($dateFrom) {
+            $dateConditionNoAlias = " AND created_at >= '" . $dateFrom . "'";
+        } elseif ($dateTo) {
+            $dateConditionNoAlias = " AND created_at <= '" . $dateTo . "'";
+        }
+
+        // Get client IDs who have made exactly one purchase (within date range if specified)
+        $singlePurchaseQuery = 'SELECT S.clientid, COUNT(*) as purchase_count
+             FROM `sale` AS S 
+             WHERE S.clientid > 0';
+        
+        if ($dateCondition) {
+            $singlePurchaseQuery .= $dateCondition;
+        }
+        
+        $singlePurchaseQuery .= ' GROUP BY S.clientid HAVING purchase_count = 1';
+        
+        $singlePurchaseClients = DB::select($singlePurchaseQuery);
+        
+        $singlePurchaseClientIds = [];
+        foreach ($singlePurchaseClients as $client) {
+            if ($client->clientid > 0) {
+                $singlePurchaseClientIds[] = $client->clientid;
+            }
+        }
+
+        // Get clients who have made any purchase (within date range if specified)
+        $clientsWithSalesQuery = 'SELECT DISTINCT S.clientid 
+             FROM `sale` AS S 
+             WHERE S.clientid > 0';
+        
+        if ($dateCondition) {
+            $clientsWithSalesQuery .= $dateCondition;
+        }
+        
+        $clientsWithSales = DB::select($clientsWithSalesQuery);
+        
+        $clientsWithSalesIds = [];
+        foreach ($clientsWithSales as $sale) {
+            if ($sale->clientid > 0) {
+                $clientsWithSalesIds[] = $sale->clientid;
+            }
+        }
+
+        // If date range is specified, we need to consider:
+        // 1. Clients with exactly one purchase in the date range AND that's their only purchase ever
+        // 2. Clients with no purchases ever (they would be non-repeating regardless of date range)
+        // If no date range is specified, use the original logic
+        if ($dateCondition) {
+            // With date range: Find clients whose ONLY purchase was in the date range
+            // Get all clients who have made exactly one purchase ever (without date filter)
+            $allSinglePurchaseClientsEver = DB::select(
+                'SELECT S.clientid, COUNT(*) as purchase_count
+                 FROM `sale` AS S 
+                 WHERE S.clientid > 0 
+                 GROUP BY S.clientid
+                 HAVING purchase_count = 1'
+            );
+            
+            $allSinglePurchaseClientsEverIds = [];
+            foreach ($allSinglePurchaseClientsEver as $client) {
+                if ($client->clientid > 0) {
+                    $allSinglePurchaseClientsEverIds[] = $client->clientid;
+                }
+            }
+            
+            // Clients who made exactly one purchase in the date range AND that's their only purchase ever
+            $nonRepeatingInRange = array_intersect($singlePurchaseClientIds, $allSinglePurchaseClientsEverIds);
+            
+            // Also include clients who have never made any purchase (they are always non-repeating)
+            $allRealClients = Client::where('isrealclient', '=', '1')->pluck('id')->toArray();
+            $allClientsWithSalesEver = DB::select('SELECT DISTINCT S.clientid FROM `sale` AS S WHERE S.clientid > 0');
+            $allClientsWithSalesEverIds = [];
+            foreach ($allClientsWithSalesEver as $sale) {
+                if ($sale->clientid > 0) {
+                    $allClientsWithSalesEverIds[] = $sale->clientid;
+                }
+            }
+            $clientsWithNoPurchasesEver = array_diff($allRealClients, $allClientsWithSalesEverIds);
+            
+            $nonRepeatingIds = array_merge($nonRepeatingInRange, $clientsWithNoPurchasesEver);
+        } else {
+            // Without date range: original logic - clients with exactly one purchase ever OR clients with no purchases ever
+            $allRealClients = Client::where('isrealclient', '=', '1')->pluck('id')->toArray();
+            // Get all clients who have ever made a purchase (without date filter)
+            $allClientsWithSales = DB::select('SELECT DISTINCT S.clientid FROM `sale` AS S WHERE S.clientid > 0');
+            $allClientsWithSalesIds = [];
+            foreach ($allClientsWithSales as $sale) {
+                if ($sale->clientid > 0) {
+                    $allClientsWithSalesIds[] = $sale->clientid;
+                }
+            }
+            $clientsWithNoPurchasesEver = array_diff($allRealClients, $allClientsWithSalesIds);
+            $nonRepeatingIds = array_merge($singlePurchaseClientIds, $clientsWithNoPurchasesEver);
+        }
+
+        if (count($nonRepeatingIds) > 0) {
+            $query->whereIn('id', $nonRepeatingIds);
+        } else {
+            // If no non-repeating clients exist, return empty result
+            $query->whereRaw('1 = 0');
+        }
+
+        $perPage = $request->get('per_page', 50);
+        $clients = $query->orderBy('id', 'desc')->paginate($perPage);
+        $clients->appends([
+            'searchtext' => $request->searchtext, 
+            'datefrom' => $request->datefrom,
+            'dateto' => $request->dateto,
+            'per_page' => $perPage
+        ]);
+
+        // Get last sale date for each client to display (within date range if specified)
+        foreach ($clients as $client) {
+            $lastSaleQuery = 'SELECT MAX(created_at) as last_sale_date 
+                 FROM `sale` 
+                 WHERE clientid = ' . $client->id . ' 
+                 AND clientid > 0';
+            
+            if ($dateConditionNoAlias) {
+                $lastSaleQuery .= $dateConditionNoAlias;
+            }
+            
+            $lastSale = DB::selectOne($lastSaleQuery);
+            $client->last_sale_date = $lastSale ? $lastSale->last_sale_date : null;
+        }
+
+        return view('nonrepeatingcustomers', ['clients' => $clients]);
+    }
+
 
 }

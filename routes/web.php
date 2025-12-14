@@ -36,6 +36,7 @@
     
     $router->group([ 'middleware' => ['auth'] ], function($router)
                    {
+                   Route::get('/home/popular-services', 'HomeController@getPopularServices')->name('home.popularservices');
                    //$router->resource('user', 'UserController');
                    // categories
                    /*   Route::get('category/add', 'CategoryController@add')->name('category.create');
@@ -82,6 +83,7 @@
                    Route::post('purchase/{id}/editpayment/{id1}', 'PurchaseController@updatepayment')->name("purchase.updatepayment");
                    
                    Route::get('clients/100list', 'ClientsController@listfirsthundred')->name("clients.listfirsthundred");
+                   Route::get('clients/nonrepeating', 'ClientsController@nonRepeatingCustomers')->name("clients.nonrepeating");
                    //    Route::get('clients/clientpackagelist', 'ClientsPackageListController@clientpackagelist')->name("clients
                    //.clientpackagelist");
                    Route::get('clients/{id}/paymentlist', 'ClientsController@paymentlist')->name("clients.paymentlist");

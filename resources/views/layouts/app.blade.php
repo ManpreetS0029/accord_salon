@@ -85,6 +85,9 @@
                                     <a href="{{  route('clients.listfirsthundred') }}">First 100 Clients</a>
                                 </li>
                                 <li>
+                                    <a href="{{  route('clients.nonrepeating') }}">Non-Repeating Customers</a>
+                                </li>
+                                <li>
                                     <a href="{{  route('clientspackage.create') }}">Add Package</a>
                                 </li>
                                 <li>

@@ -142,18 +142,35 @@ class SaleController extends Controller
          }  )->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->paginate(50); //DB::table('')->paginate(50);*/
 
         $saleForCalculations = '';
+        $perPage = $request->get('per_page', 50);
 
         if ($search == false) {
             $salesAll = Sale::groupBy('id')->orderBy('sale.created_at', 'desc')->get();
             $saleForCalculations = $salesAll;
 
-            $perPage = $request->get('per_page', 50);
             $sales = Sale::groupBy('id')->orderBy('sale.created_at', 'desc')->paginate($perPage);
-            $sales->appends(['datefrom' => $request->datefrom, 'dateto' => $request->dateto, 'paymentmode' => $request->paymentmode, 'per_page' => $perPage]);
+            $sales->appends([
+                'datefrom' => $request->datefrom, 
+                'dateto' => $request->dateto, 
+                'paymentmodeid' => $request->paymentmodeid,
+                'paymentstatus' => $request->paymentstatus,
+                'clientname' => $request->clientname,
+                'per_page' => $perPage
+            ]);
         } else {
-
-            $sales = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
-            $saleForCalculations = $sales;
+            // Use pagination for search results as well
+            $sales = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->paginate($perPage);
+            $sales->appends([
+                'datefrom' => $request->datefrom, 
+                'dateto' => $request->dateto, 
+                'paymentmodeid' => $request->paymentmodeid,
+                'paymentstatus' => $request->paymentstatus,
+                'clientname' => $request->clientname,
+                'per_page' => $perPage
+            ]);
+            
+            // Get all results for calculations (without pagination)
+            $saleForCalculations = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
         }
 
         $totalSale = 0;
