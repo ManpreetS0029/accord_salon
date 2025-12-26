@@ -13,22 +13,23 @@
 
 		    <form action="" method="get">
 			<div class="row">
-			    <div class="col-md-3">
+			    <div class="col-md-4">
 				<label for="">Client Name/ Phone</label>
 				{{ Form::text('searchtext', request()->get('searchtext'), ['class' => 'form-control'] )}}
 			    </div>
 
-			    <div class="col-md-3">
-				<label for="">Date From</label>
-				{{ Form::text('datefrom', request()->get('datefrom'), ['class' => 'form-control datepickers', 'placeholder' => 'dd/mm/yyyy'] )}}
+			    <div class="col-md-4">
+				<label for="">Filter By</label>
+				{{ Form::select('filter', [
+				    '' => 'All',
+				    'never' => 'Never',
+				    'once' => 'Once',
+				    'two_times' => 'Two Times',
+				    'regular' => 'Regular (at least once in 2 months)'
+				], request()->get('filter'), ['class' => 'form-control'] )}}
 			    </div>
 
-			    <div class="col-md-3">
-				<label for="">Date To</label>
-				{{ Form::text('dateto', request()->get('dateto'), ['class' => 'form-control datepickers', 'placeholder' => 'dd/mm/yyyy'] )}}
-			    </div>
-
-			    <div class="col-md-3">
+			    <div class="col-md-4">
 				<label for="">&nbsp;</label><br />
                                 
 				{{ Form::submit('Search',  array('class' => 'btn btn-primary', 'name' => 'search'))  }}

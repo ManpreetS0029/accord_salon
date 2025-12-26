@@ -28,59 +28,129 @@
         </div>
     </div>
 
-    <!-- Popular Services Section -->
+    <!-- Popular Services Section with Tabs -->
     <div class="row" style="margin-top: 30px;">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i> Most Popular Services
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i> Service Popularity
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <!-- Filter Buttons -->
-                    <div class="row" style="margin-bottom: 20px;">
-                        <div class="col-md-12">
-                            <div class="btn-group" role="group" aria-label="Filter">
-                                <button type="button" class="btn btn-default filter-btn active" data-filter="weekly">
-                                    Weekly
-                                </button>
-                                <button type="button" class="btn btn-default filter-btn" data-filter="monthly">
-                                    Monthly
-                                </button>
-                                <button type="button" class="btn btn-default filter-btn" data-filter="yearly">
-                                    Yearly
-                                </button>
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 20px;">
+                        <li role="presentation" class="active">
+                            <a href="#most-popular" aria-controls="most-popular" role="tab" data-toggle="tab" id="most-popular-tab">
+                                Most Popular Services
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#least-popular" aria-controls="least-popular" role="tab" data-toggle="tab" id="least-popular-tab">
+                                Least Popular Services
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Most Popular Tab -->
+                        <div role="tabpanel" class="tab-pane active" id="most-popular">
+                            <!-- Filter Buttons -->
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="col-md-12">
+                                    <div class="btn-group" role="group" aria-label="Filter">
+                                        <button type="button" class="btn btn-default filter-btn active" data-filter="weekly">
+                                            Weekly
+                                        </button>
+                                        <button type="button" class="btn btn-default filter-btn" data-filter="monthly">
+                                            Monthly
+                                        </button>
+                                        <button type="button" class="btn btn-default filter-btn" data-filter="yearly">
+                                            Yearly
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Loading Indicator -->
+                            <div id="loading-indicator" style="display: none; text-align: center; padding: 20px;">
+                                <i class="fa fa-spinner fa-spin fa-3x"></i>
+                                <p>Loading data...</p>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered table-hover" id="popularServicesTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Service Name</th>
+                                                    <th>Total Quantity</th>
+                                                    <th>Total Sales</th>
+                                                    <th>Total Revenue</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="popularServicesTableBody">
+                                                <tr>
+                                                    <td colspan="5" style="text-align: center;">Loading data...</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Loading Indicator -->
-                    <div id="loading-indicator" style="display: none; text-align: center; padding: 20px;">
-                        <i class="fa fa-spinner fa-spin fa-3x"></i>
-                        <p>Loading data...</p>
-                    </div>
+                        <!-- Least Popular Tab -->
+                        <div role="tabpanel" class="tab-pane" id="least-popular">
+                            <!-- Filter Buttons -->
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="col-md-12">
+                                    <div class="btn-group" role="group" aria-label="Filter">
+                                        <button type="button" class="btn btn-default filter-btn-least active" data-filter="weekly">
+                                            Weekly
+                                        </button>
+                                        <button type="button" class="btn btn-default filter-btn-least" data-filter="monthly">
+                                            Monthly
+                                        </button>
+                                        <button type="button" class="btn btn-default filter-btn-least" data-filter="yearly">
+                                            Yearly
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <!-- Table -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="popularServicesTable">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Service Name</th>
-                                            <th>Total Quantity</th>
-                                            <th>Total Sales</th>
-                                            <th>Total Revenue</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="popularServicesTableBody">
-                                        <tr>
-                                            <td colspan="5" style="text-align: center;">Loading data...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <!-- Loading Indicator -->
+                            <div id="loading-indicator-least" style="display: none; text-align: center; padding: 20px;">
+                                <i class="fa fa-spinner fa-spin fa-3x"></i>
+                                <p>Loading data...</p>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered table-hover" id="leastPopularServicesTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Service Name</th>
+                                                    <th>Total Quantity</th>
+                                                    <th>Total Sales</th>
+                                                    <th>Total Revenue</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="leastPopularServicesTableBody">
+                                                <tr>
+                                                    <td colspan="5" style="text-align: center;">Loading data...</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,19 +163,42 @@
 
 @section('script')
 <script>
-    var currentFilter = 'monthly';
+    var currentFilterMost = 'weekly';
+    var currentFilterLeast = 'weekly';
+    var mostPopularLoaded = false;
+    var leastPopularLoaded = false;
 
     $(document).ready(function() {
-        // Load initial data
-        loadPopularServices('monthly');
+        // Load initial data for most popular tab
+        loadPopularServices('weekly');
+        mostPopularLoaded = true;
 
-        // Handle filter button clicks
+        // Handle tab switching
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href");
+            
+            if (target === '#least-popular' && !leastPopularLoaded) {
+                loadLeastPopularServices(currentFilterLeast);
+                leastPopularLoaded = true;
+            }
+        });
+
+        // Handle filter button clicks for popular services
         $('.filter-btn').on('click', function() {
             $('.filter-btn').removeClass('active');
             $(this).addClass('active');
             var filter = $(this).data('filter');
-            currentFilter = filter;
+            currentFilterMost = filter;
             loadPopularServices(filter);
+        });
+
+        // Handle filter button clicks for least popular services
+        $('.filter-btn-least').on('click', function() {
+            $('.filter-btn-least').removeClass('active');
+            $(this).addClass('active');
+            var filter = $(this).data('filter');
+            currentFilterLeast = filter;
+            loadLeastPopularServices(filter);
         });
     });
 
@@ -139,6 +232,55 @@
 
     function renderTable(data) {
         var tableBody = $('#popularServicesTableBody');
+        tableBody.empty();
+
+        if (data.length === 0) {
+            tableBody.html('<tr><td colspan="5" style="text-align: center;">No data available.</td></tr>');
+            return;
+        }
+
+        data.forEach(function(item, index) {
+            var row = '<tr>' +
+                '<td>' + (index + 1) + '</td>' +
+                '<td>' + (item.service_name || 'N/A') + '</td>' +
+                '<td>' + parseInt(item.total_quantity || 0).toLocaleString() + '</td>' +
+                '<td>' + parseInt(item.total_sales || 0).toLocaleString() + '</td>' +
+                '<td>' + parseFloat(item.total_revenue || 0).toFixed(2).toLocaleString() + '</td>' +
+                '</tr>';
+            tableBody.append(row);
+        });
+    }
+
+    function loadLeastPopularServices(filter) {
+        $('#loading-indicator-least').show();
+        $('#leastPopularServicesTableBody').html('<tr><td colspan="5" style="text-align: center;">Loading data...</td></tr>');
+
+        $.ajax({
+            url: '{{ route("home.leastpopularservices") }}',
+            method: 'GET',
+            data: {
+                filter: filter,
+                _token: _token
+            },
+            success: function(response) {
+                $('#loading-indicator-least').hide();
+                
+                if (response.success && response.data.length > 0) {
+                    renderLeastPopularTable(response.data);
+                } else {
+                    $('#leastPopularServicesTableBody').html('<tr><td colspan="5" style="text-align: center;">No data available for the selected period.</td></tr>');
+                }
+            },
+            error: function(xhr, status, error) {
+                $('#loading-indicator-least').hide();
+                $('#leastPopularServicesTableBody').html('<tr><td colspan="5" style="text-align: center; color: red;">Error loading data. Please try again.</td></tr>');
+                console.error('Error:', error);
+            }
+        });
+    }
+
+    function renderLeastPopularTable(data) {
+        var tableBody = $('#leastPopularServicesTableBody');
         tableBody.empty();
 
         if (data.length === 0) {

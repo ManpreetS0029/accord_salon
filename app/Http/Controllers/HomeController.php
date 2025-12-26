@@ -120,4 +120,55 @@ class HomeController extends Controller
             'filter' => $filter
         ]);
     }
+
+    /**
+     * Get least popular services based on filter (weekly, monthly, yearly)
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getLeastPopularServices(Request $request)
+    {
+        $filter = $request->input('filter', 'monthly'); // weekly, monthly, yearly
+
+        // Build date condition based on filter
+        $dateCondition = '';
+        switch ($filter) {
+            case 'weekly':
+                $dateCondition = "AND S.created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)";
+                break;
+            case 'monthly':
+                $dateCondition = "AND S.created_at >= DATE_SUB(NOW(), INTERVAL 1 MONTH)";
+                break;
+            case 'yearly':
+                $dateCondition = "AND S.created_at >= DATE_SUB(NOW(), INTERVAL 1 YEAR)";
+                break;
+            default:
+                $dateCondition = "AND S.created_at >= DATE_SUB(NOW(), INTERVAL 1 MONTH)";
+        }
+
+        // Query to get least popular services with count and total quantity
+        $leastPopularServices = DB::select("
+            SELECT 
+                SI.itemid,
+                COALESCE(MAX(SVC.name), MAX(SI.title), 'Unknown Service') as service_name,
+                SUM(SI.quantity) as total_quantity,
+                COUNT(DISTINCT SI.saleid) as total_sales,
+                SUM(SI.actualpriceperitem * SI.quantity) as total_revenue
+            FROM saleitems SI
+            INNER JOIN sale S ON SI.saleid = S.id
+            LEFT JOIN services SVC ON SI.itemid = SVC.id AND SI.itemtype = 'service'
+            WHERE SI.itemtype = 'service'
+            {$dateCondition}
+            GROUP BY SI.itemid
+            ORDER BY total_quantity ASC
+            LIMIT 10
+        ");
+
+        return response()->json([
+            'success' => true,
+            'data' => $leastPopularServices,
+            'filter' => $filter
+        ]);
+    }
 }

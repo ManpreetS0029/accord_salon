@@ -159,7 +159,7 @@ class SaleController extends Controller
             ]);
         } else {
             // Use pagination for search results as well
-            $sales = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->paginate($perPage);
+            $sales = (clone $query)->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->paginate($perPage);
             $sales->appends([
                 'datefrom' => $request->datefrom, 
                 'dateto' => $request->dateto, 
@@ -170,7 +170,7 @@ class SaleController extends Controller
             ]);
             
             // Get all results for calculations (without pagination)
-            $saleForCalculations = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
+            $saleForCalculations = (clone $query)->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
         }
 
         $totalSale = 0;
@@ -246,7 +246,7 @@ class SaleController extends Controller
 
 
         if ($request->exportdata == '1') {
-            $salesForExcelSheet = $query->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
+            $salesForExcelSheet = (clone $query)->groupBy('sale.id')->orderBy('sale.created_at', 'desc')->get();
             $arrayData = array();
             $arrayData[] = array("Sale ID",  "Client Name", "Amount", "Amount Paid", "Amount Under Review", "Amt. Pending", "Sale Date");
             foreach ($salesForExcelSheet as $item) {

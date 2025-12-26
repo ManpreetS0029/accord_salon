@@ -37,6 +37,7 @@
     $router->group([ 'middleware' => ['auth'] ], function($router)
                    {
                    Route::get('/home/popular-services', 'HomeController@getPopularServices')->name('home.popularservices');
+                   Route::get('/home/least-popular-services', 'HomeController@getLeastPopularServices')->name('home.leastpopularservices');
                    //$router->resource('user', 'UserController');
                    // categories
                    /*   Route::get('category/add', 'CategoryController@add')->name('category.create');
